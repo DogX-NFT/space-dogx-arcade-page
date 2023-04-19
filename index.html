@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
-      .unity-container {
+      body, .unity-container {
           overflow: hidden;
       }
     </style>
@@ -82,8 +82,8 @@
 
       // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        container.style.width = document.innerWidth + "px";
-        container.style.height = document.innerHeight + "px";
+        container.style.width = document.innerWidth - 10 + "px";
+        container.style.height = document.innerHeight - 10 + "px";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
