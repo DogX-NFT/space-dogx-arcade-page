@@ -82,11 +82,11 @@
 
       // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        container.style.width = document.innerWidth + "px";
-        container.style.height = document.innerHeight + "px";
+        container.style.width = document.innerWidth - 20 + "px";
+        container.style.height = document.innerHeight - 20 + "px";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
-        // config.devicePixelRatio = 1;
+        config.devicePixelRatio = 1;
         // unityShowBanner('WebGL builds are not supported on mobile devices.');
       // } else {
       //   canvas.style.width = "950px";
