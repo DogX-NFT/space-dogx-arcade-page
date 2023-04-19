@@ -79,16 +79,19 @@
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
+      container.className = "unity-mobile";
 
-      // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        container.style.width = document.innerWidth + "px";
-        container.style.height = document.innerHeight + "px";
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          container.classList.add("unity-mobile-desktop")
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         // config.devicePixelRatio = 1;
         // unityShowBanner('WebGL builds are not supported on mobile devices.');
-      // } else {
+      }
+
+      container.style.width = document.innerWidth + "px";
+      container.style.height = document.innerHeight + "px";
+      // else {
       //   canvas.style.width = "950px";
       //   canvas.style.height = "600px";
       // }
