@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
-      body {
-          overflow-y: hidden;
+      .unity-container {
+          overflow: hidden;
       }
     </style>
   </head>
@@ -86,7 +86,7 @@
         container.style.height = document.innerHeight + "px";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
-        // config.devicePixelRatio = 1;
+        config.devicePixelRatio = 1;
         // unityShowBanner('WebGL builds are not supported on mobile devices.');
       // } else {
       //   canvas.style.width = "950px";
